@@ -41,8 +41,8 @@ export class SalesController {
     return this.salesService.remove(+id);
   }
 
-  // @Get('search/:itemName')
-  // searchItem(@Param('itemName') itemName: string): Promise<Sales | undefined> {
-  //   return this.salesService.searchItem(itemName);
-  // }
+  @Get('search/:itemName')
+  searchItem(@Param('itemName') itemName: string): Promise<Sales | undefined> {
+    return this.salesService.searchItem(itemName);
+  }
 }

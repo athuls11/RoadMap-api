@@ -32,7 +32,7 @@ export class SalesService {
     await this.salesRepository.delete(id);
   }
 
-  // async searchItem(itemName: string): Promise<Sales | undefined> {
-  //   return this.salesRepository.findOneBy({ itemName });
-  // }
+  async searchItem(itemName: string): Promise<Sales | undefined> {
+    return this.salesRepository.findOneBy({ itemName });
+  }
 }
